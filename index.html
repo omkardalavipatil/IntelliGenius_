@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelli-Genius</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body>
+
+    <header>Intelli-Genius</header>
+
+    <div id="image-preview-container">
+        <img id="image-preview" alt="Image Preview" />
+    </div>
+
+    <!-- Toggle switch container -->
+    <div class="toggle-switch-container">
+        <label class="switch">
+            <input type="checkbox" id="speechToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="toggle-label">Speak</span>
+    </div>
+
+    <div id="chat-container">
+        <div class="message-container">
+            <!-- Messages will be dynamically added here -->
+        </div>
+    </div>
+
+    <div id="input-container">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+
+        <!-- Image button for image input -->
+        <img src="./photoIcon2.png" alt="Image" class="image-button" onclick="document.getElementById('image-input').click()" />
+        <input type="file" id="image-input" accept="image/*" style="display: none;" />
+
+        <img src="send.png" alt="Send" id="send-button" class="image-button" />
+        <img src="mic.png" alt="Microphone" id="mic-button" class="image-button" />
+    </div>
+
+    <script type="importmap">
+        { "imports": { "@google/generative-ai": "https://esm.run/@google/generative-ai" } }
+    </script>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
