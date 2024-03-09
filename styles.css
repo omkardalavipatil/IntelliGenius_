@@ -18,8 +18,9 @@ header {
     font-size: 30px;
     font-family: 'Pacifico', cursive;
     width: 100%;
-    position: fixed;
-    top: 0;
+    position: fixed; /* Fixed position */
+    top: 0; /* Top of the viewport */
+    z-index: 1000; /* Ensure it's above other elements */
 }
 
 #chat-container {
