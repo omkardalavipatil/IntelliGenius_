@@ -6,7 +6,7 @@ body {
     animation: backgroundAnimation 10s infinite alternate;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensures that the body takes up at least the full viewport height */
 }
 
 header {
@@ -18,16 +18,12 @@ header {
     font-size: 30px;
     font-family: 'Pacifico', cursive;
     width: 100%;
-    position: fixed; /* Fixed position */
-    top: 0; /* Top of the viewport */
-    z-index: 1000; /* Ensure it's above other elements */
 }
 
 #chat-container {
     flex: 1;
     overflow-y: auto;
     padding: 20px;
-    padding-top: 70px; /* Adjusted padding to accommodate header */
 }
 
 .message-container {
@@ -113,13 +109,7 @@ header {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
-}
-
-#send-button:hover,
-#send-button:active {
-    background-color: #f7dc70; /* Change color when hovered or clicked */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Added box-shadow on hover */
+    transition: background-color 0.3s;
 }
 
 #mic-button {
@@ -131,13 +121,7 @@ header {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
-}
-
-#mic-button:hover,
-#mic-button:active {
-    background-color: #f7dc70; /* Change color when hovered or clicked */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Added box-shadow on hover */
+    transition: background-color 0.3s;
 }
 
 #input-container {
